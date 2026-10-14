@@ -71,3 +71,13 @@ class Tarea {
     formTarea.reset();
     feedback.textContent = "Escribiendo: ...";
   });
+
+  formTarea.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const li = document.createElement("li");
+    li.textContent = txtTarea.value;
+    listaTareas.appendChild(li);
+  });
+  txtTarea.addEventListener("input", () => {
+    feedback.textContent = "Escribiendo: " + txtTarea.value;
+  });
