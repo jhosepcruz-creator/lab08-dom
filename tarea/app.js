@@ -81,3 +81,17 @@ class Tarea {
   txtTarea.addEventListener("input", () => {
     feedback.textContent = "Escribiendo: " + txtTarea.value;
   });
+
+  class Tarea {
+    constructor(id, descripcion, prioridad) {
+      this.id = id;
+      this.descripcion = descripcion;
+      this.prioridad = prioridad;
+    }
+    formato() {
+      return `[${this.prioridad.toUpperCase()}] ${this.descripcion}`;
+    }
+    esAltaPrioridad() {
+      return this.prioridad === "Alta";
+    }
+  }
