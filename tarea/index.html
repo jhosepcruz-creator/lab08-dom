@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea Lab 08 - Gestor de Tareas</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 30px auto; }
+    form { display: flex; gap: 8px; margin-bottom: 12px; }
+    input, select, button { padding: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #ccc; }
+    .alta { font-weight: bold; color: #c0392b; }
+    .error { color: red; font-size: 0.9em; margin-top: -8px; margin-bottom: 12px; }
+    .btn-borrar { background: #e74c3c; color: white; border: none; cursor: pointer; padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <h1>Gestor Interactivo de Tareas</h1>
+  
+  <form id="formTarea">
+    <input id="txtTarea" type="text" placeholder="Escribe una tarea...">
+    <select id="selPrioridad">
+      <option value="Baja">Baja</option>
+      <option value="Media">Media</option>
+      <option value="Alta">Alta</option>
+    </select>
+    <button type="submit">Agregar</button>
+  </form>
+  <p id="msgError" class="error"></p>
+  <p id="feedback">Escribiendo: ...</p>
+
+  <h2>Lista de Pendientes (<span id="contador">0</span>)</h2>
+  <ul id="listaTareas"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
